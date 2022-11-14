@@ -1,7 +1,7 @@
 @import "./general.css";
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-/*  TOP PICKS & SUBSCRIPTIONS - Matthew                                      */
+/*  TOP PICKS, SUBSCRIPTIONS, DOWNLOAD                                       */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 .top-picks, .subscriptions {
     margin: 10% 0;
@@ -63,6 +63,32 @@
     background-color: rgb(var(--app-color-tertiary));
 }
 
+.select-btn {
+    width: 65%;
+    padding: 15px;
+}
+
 .lower-cards {
     transform: translateY(30px);
+}
+
+.download {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    height: 300px;
+    margin: 10% 0 3% 0;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.download-btn {
+    padding: 10px;
 }
