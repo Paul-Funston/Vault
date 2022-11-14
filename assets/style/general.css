@@ -41,7 +41,25 @@ header {
     background-color: rgb(var(--app-light-bg));
 }
 
-nav a {
+
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+nav, ul {
+   display: flex;
+   align-items: center; 
+}
+
+li {
+    margin-left: 8px;
+}
+
+header a  {
     color: rgb(40 40 40);
     text-decoration: none;
 }
