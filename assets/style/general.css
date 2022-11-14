@@ -15,7 +15,7 @@
     --app-yellow:       219 201 112;
 
     --header-height: 56px;
-    --footer-height: 112px;
+    --footer-height: 130px;
    }
 
 .container {
@@ -41,10 +41,9 @@ header {
     background-color: rgb(var(--app-light-bg));
 }
 
-header h2 {
+header h2, footer h2 {
     font-family: "Righteous", "Raleway", Arial, sans-serif;
 }
-
 
 .header-container {
     display: flex;
@@ -99,6 +98,22 @@ header a  {
 footer {
     height: var(--footer-height);
     background-color: rgb(var(--app-light-bg));
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    gap: 5px;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+.copy {
+    font-size: 12px;
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
