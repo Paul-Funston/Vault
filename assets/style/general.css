@@ -41,6 +41,9 @@ header {
     background-color: rgb(var(--app-light-bg));
 }
 
+header h2 {
+    font-family: "Righteous", "Raleway", Arial, sans-serif;
+}
 
 
 .header-container {
