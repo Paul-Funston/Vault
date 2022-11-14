@@ -23,7 +23,7 @@ function selectAll(selector, parent = document) {
 
 
 const emailRegex = /^(?=^.{8,}$)[-_A-Za-z0-9]+([_.-][a-zA-Z0-9]+)*@[A-Za-z0-9]+([.-][a-zA-Z0-9]+)*\.[A-Za-z]{2,}$/;
-const phoneRegexNA = /^\\(?([0-9]{3})\\)?[-.\\s]?([0-9]{3})[-.\\s]?([0-9]{4})$/;
+const phoneRegexNA = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
 const formName = select('.user-name');
 const formEmail = select('.email');
 const formMessage = select('.message');
@@ -45,9 +45,13 @@ function isEmpty(input) {
 
 function anyEmpty(...inputs) {
   let result = false;
+  let count = 1;
   inputs.forEach(input => {
-    if (isEmpty(input))
+    if (isEmpty(input)) {
       result = true;
+      console.log(`${count} is empty`);
+    }
+    count++;
   })
 
   return result
@@ -73,13 +77,27 @@ function isFormValid () {
   let userMessage = formMessage.value.trim();
   let userPhone = formPhone.value.trim();
 
-  if (anyEmpty(userName, userEmail, userMessage))
+  if (anyEmpty(userName, userEmail, userMessage)) {
+    console.log('false is empty');
+    return false
+  }
+    
+   
+
+  if (!isEmail(userEmail)) {
+    console.log(`false email not valid`);
+    return false
+  }
+
+  if (!isEmpty(userPhone) && !isNaPhone(userPhone)) {
+    console.log('false phone not valid');
     return false
 
-  if (!isEmail(userEmail))
-    return false
+  }
 
-  if (!isEmpty(userPhone) && !isNaPhone(userPhone))
-    return false
+    console.log('true');
 }
 
+onEvent('click', formButton, () => {
+  isFormValid();
+});
