@@ -3,7 +3,8 @@
 :root {
     --app-color-primary: 255 26 247;
     --app-color-secondary: 26 255 34;
-
+    --app-color-tertiary: 65 67 89;
+    
     --app-dark-bg:        12 22 28;
     --app-light-bg:     10 40 10;
 
@@ -35,6 +36,16 @@ p, h1, h2, h3, h4, h5, h6 {
 header, footer, body {
     background-color: rgb(var(--app-dark-bg));
 }
+
+button {
+    width: 65%;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1rem;
+    color: rgb(var(--app-color-tertiary));
+    background-color: rgb(var(--app-color-secondary));
+}
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  Header                                                                   */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -54,7 +65,7 @@ header h2, footer h2 {
     height: 100%;
 }
 
-nav, ul {
+nav ul {
    display: flex;
    align-items: center; 
 }
@@ -65,7 +76,7 @@ li {
 
 header a  {
     text-decoration: none;
-    color: rgb(var(--app-color-primary));
+    color: #FFF;
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
