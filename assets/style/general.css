@@ -67,7 +67,30 @@ header a  {
     text-decoration: none;
 }
 
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/*  Hero banner                                                              */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
+.hero-banner{
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f3f3f5 url(../media/herobanner.jpg) center center / cover no-repeat;
+}
+
+.overlay {
+    margin-bottom: 30px;
+    text-align: center;
+}
+.overlay h1{
+    font-size: 50px;
+    font-weight: 500;
+}
+.overlay p{
+    font-size: 30px;
+    font-weight: 500;
+}
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  Footer                                                                   */
