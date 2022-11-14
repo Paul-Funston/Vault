@@ -82,10 +82,6 @@ footer {
 /*  Main                                                                     */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-main {
-    height: calc(100vh - var(--header-height) - var(--footer-height));
-}
-
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  Form                                                                     */
