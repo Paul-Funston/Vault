@@ -24,12 +24,12 @@ function selectAll(selector, parent = document) {
 
 const emailRegex = /^(?=^.{8,}$)[-_A-Za-z0-9]+([_.-][a-zA-Z0-9]+)*@[A-Za-z0-9]+([.-][a-zA-Z0-9]+)*\.[A-Za-z]{2,}$/;
 const phoneRegexNA = /^\\(?([0-9]{3})\\)?[-.\\s]?([0-9]{3})[-.\\s]?([0-9]{4})$/;
-const formName = select('.name');
+const formName = select('.user-name');
 const formEmail = select('.email');
 const formMessage = select('.message');
 const formSubscribe = '';
-const formButton = '';
-const formPhone = '';
+const formButton = select('.send');
+const formPhone = select('.phone');
 const formInputs = selectAll('form input');
 
 
@@ -49,6 +49,7 @@ function anyEmpty(...inputs) {
     if (isEmpty(input))
       result = true;
   })
+
   return result
 }
 
@@ -66,16 +67,19 @@ function isNaPhone(input) {
   return false
 }
 
-function validate () {
+function isFormValid () {
   let userName = formName.value.trim();
   let userEmail = formEmail.value.trim();
   let userMessage = formMessage.value.trim();
-  let userPhone = fromPhone.value.trim();
+  let userPhone = formPhone.value.trim();
 
   if (anyEmpty(userName, userEmail, userMessage))
     return false
 
-  
+  if (!isEmail(userEmail))
+    return false
 
+  if (!isEmpty(userPhone) && !isNaPhone(userPhone))
+    return false
 }
 
