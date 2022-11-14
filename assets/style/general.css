@@ -139,6 +139,7 @@ body, a, i {
 
 form {
     max-width: (100% - 100px, 1080px);
+    height: calc(100vh - var(--header-height) - var(--footer-height));
     margin-inline: auto;
     text-align: right;
     font-size: 0;
