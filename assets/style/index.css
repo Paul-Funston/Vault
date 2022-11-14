@@ -1,22 +1,39 @@
 @import "./general.css";
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-/*  TOP PICKS - Matthew                                                      */
+/*  TOP PICKS & SUBSCRIPTIONS - Matthew                                      */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 .top-picks, .subscriptions {
+    margin: 10% 0;
+    text-align: center;
+}
+
+.top-picks div, .subscriptions div {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 10px;
-    margin: 10% 0;
+    gap: 15px;
+}
+
+.top-picks ul li, .subscriptions ul li {
+    margin: 10px 0;
+}
+
+.section-title {
+    margin-bottom: 30px;
 }
 
 .card {
-    background-color: #F2F4F9;
     border-radius: 5px;
 }
 
+.nba { background: #F0F2F4 url("../media/nba.jpg") center center / cover no-repeat; }
+.nhl { background: #F0F2F4 url("../media/nhl.jpg") center center / cover no-repeat; }
+.nfl { background: #F0F2F4 url("../media/nfl.jpg") center center / cover no-repeat; }
+.olympics { background: #F0F2F4 url("../media/olympics.jpg") center center / cover no-repeat; }
+
 .arrow {
+    display: none;
     font-size: 25px;
     background-color: #FFF;
 }
@@ -24,6 +41,12 @@
 .top-picks .card {
     width: 300px;
     height: 250px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.top-picks .card:hover {
+    opacity: 0.3;
 }
 
 .subscriptions {
@@ -31,11 +54,15 @@
 }
 
 .subscriptions .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 400px;
     height: 400px;
+    background-color: rgb(var(--app-color-tertiary));
 }
 
-.middle-card {
-    box-shadow: 0 0 18px #888;
+.lower-cards {
+    transform: translateY(30px);
 }
-
