@@ -1,1 +1,41 @@
 @import "./general.css";
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/*  TOP PICKS - Matthew                                                      */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+.top-picks, .subscriptions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin: 10% 0;
+}
+
+.card {
+    background-color: #F2F4F9;
+    border-radius: 5px;
+}
+
+.arrow {
+    font-size: 25px;
+    background-color: #FFF;
+}
+
+.top-picks .card {
+    width: 300px;
+    height: 250px;
+}
+
+.subscriptions {
+    gap: 30px;
+}
+
+.subscriptions .card {
+    width: 400px;
+    height: 400px;
+}
+
+.middle-card {
+    box-shadow: 0 0 18px #888;
+}
+
