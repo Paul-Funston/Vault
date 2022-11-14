@@ -6,7 +6,7 @@
         <meta name="author" content="Paul Funston">
         <meta name="description" content="My new cool project">
         <meta name="keywords" content="HTML, CSS, SEO, web, web development">
-        <title>Title</title>
+        <title>Contact Us</title>
         <link rel="shortcut icon" href="./assets/media/favicon.png?v=2" type="image/x-icon">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,9 +34,13 @@
         </header>
         <main>
             <div class="container">
-                <form>
-                    
+                <form novalidate>
+                    <input type="text" class="user-name" placeholder="User name *" required>
+                    <input type="email" class="email" placeholder="Email (john@email.com) *" required>
+                    <input type="text" class="message" placeholder="Message" required> 
+                    <input type="button" class="send" value="Submit">
                 </form>
+                <p class="required">Fields with * are required</p>
             </div>
         </main>
         <footer>
