@@ -28,7 +28,6 @@
 }
 
 
-
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  Default                                                                  */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -100,6 +99,54 @@ header a  {
  a i.fa-instagram {
     color: rgb(var(--app-instagram-icon));
 }
+
+/* nav menu */
+
+.button-nav {
+    display: none;
+}
+header .hidden {
+    display: none;
+}
+
+button.button-nav {
+    background-color: rgb(var(--app-dark-bg));
+}
+
+button.header-close-nav {
+    color: rgb(var(--app-color-primary));
+}
+
+button.header-open-nav {
+    color: rgb(255 255 255);
+}
+
+@media screen and (max-width: 770px) {
+    
+    .button-nav {display: block;}
+
+    nav.visible {display: flex;}
+
+    nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: var(--header-height);
+        right: 2rem;
+        z-index: 3333;
+        background-color: rgb(var(--app-dark-bg));
+        border-bottom-left-radius: 5px;
+        padding: 0 20px;
+    }
+
+    ul {flex-direction: column;}
+
+    li {margin: 1rem auto;}    
+}
+
+
+
+
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  Hero banner                                                              */
@@ -197,6 +244,7 @@ footer a {
 body, a, i {
     color: #fff;
     /* background-color: rgb(var(--app-dark-bg)); */
+    
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
