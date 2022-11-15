@@ -76,6 +76,10 @@ header a  {
     color: rgb(var(--app-white));
 }
 
+header .login {
+    padding: 0 8px;
+}
+
 a i.fa-twitter{
     color: rgb(var(--app-twitter-icon));
 }
@@ -131,9 +135,6 @@ button.header-open-nav {
 
     li {margin: 1rem auto;}    
 }
-
-
-
 
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
