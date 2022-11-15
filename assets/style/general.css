@@ -250,20 +250,19 @@ body, a, i {
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  Form                                                                     */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-form {
+
+div.form-container {
     padding: 25px;
-    margin: 10px 0;
+    margin-inline: 25vh;
     border: 1px solid rgb(255 255 255 / 0.1);
+    height: calc(100vh - var(--header-height) - var(--footer-height));
     border-radius: 8px;
     text-align: center;
-
 }
 
 form {
     max-width: (100% - 100px, 1080px);
-    height: calc(100vh - var(--header-height) - var(--footer-height) - 50px);
-    margin-inline: auto;
-    text-align: right;
+    text-align: center;
     font-size: 0;
 }
 
