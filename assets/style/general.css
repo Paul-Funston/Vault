@@ -333,14 +333,7 @@ form .display-valid {
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  MEDIA QUERIES                                                            */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-/*800px and down*/
-@media (max-width: 800px) {
-    .download * {
-        text-align: center;
-    }
-}
-
-/*670px and down*/
+/*768px and down*/
 @media (max-width: 670px) {
     .top-picks div {
         flex-direction: column;
