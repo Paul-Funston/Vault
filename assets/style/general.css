@@ -8,6 +8,7 @@
     --app-dark-bg:        12 22 28;
     --app-light-bg:     10 40 10;
 
+    --app-white:        255 255 255;
     --app-red:          219 112 147;
     --app-green:        112 219 147;
     --app-purple:       147 112 219;
@@ -72,7 +73,7 @@ li {
 
 header a  {
     text-decoration: none;
-    color: #FFF;
+    color: rgb(var(--app-white));
 }
  a i.fa-twitter{
     color: rgb(var(--app-twitter-icon));
@@ -180,19 +181,21 @@ footer a {
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 body, a, i {
-    color: #fff;
+    color: rgb(var(--app-white));
     /* background-color: rgb(var(--app-dark-bg)); */
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  Form                                                                     */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-form {
+.form-container {
     padding: 25px;
-    margin: 10px 0;
+    margin-inline: 15vw;
     border: 1px solid rgb(255 255 255 / 0.1);
     border-radius: 8px;
     text-align: center;
+    height: calc(100vh - var(--header-height) - var(--footer-height));
+
 
 }
 
@@ -202,7 +205,6 @@ form p{
 
 form {
     max-width: (100% - 100px, 1080px);
-    height: calc(100vh - var(--header-height) - var(--footer-height) - 50px);
     margin-inline: auto;
     text-align: right;
     font-size: 0;
@@ -216,13 +218,6 @@ form .formInput + .formInput {
     position: relative;
 }
 
-
-/* button[class="select-btn"]:hover {
-    background-color: rgb(var(--app-color-primary));
-    font-size: 16px;
-    font-weight: 600;
-    color: #fff;
-} */
 .required {
     margin-top: 24px;
     font-size: 16px;
@@ -251,6 +246,11 @@ form .display-valid {
 .fa-xmark {
     color: rgb(var(--app-red));
 }
+@media screen and (max-width: 770px){
+    .form-container {
+        margin-inline: 5;
+    }
+}
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  Buttons                                                        */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -265,10 +265,10 @@ button {
 
 button:hover {
     opacity: 0.8;
-    background-color: rgb(var(--app-color-secondary));
+    background-color: rgb(var(--app-color-primary));
     font-size: 16px;
     font-weight: 600;
-    color: rgb(var(--app-dark-bg));
+    color: rgb(var(--app-white));
 }
 
 button i {
@@ -292,11 +292,13 @@ input:not([type="button"]) {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
     font-size: 17px;
     font-weight: 400;
-    color: #fff;
+    color: rgb(var(--app-white));
     text-align: left;
     transition: border-color 0.25s ease-in-out;
 }
-
+input.select-btn{
+    width: 50px;
+}
 input[type="button"] ,input[class="select-btn"]{
     width: 100%;
     height: 46px;
@@ -308,7 +310,7 @@ input[type="button"] ,input[class="select-btn"]{
     font-weight: 600;
     letter-spacing: 0.2px;
     transition: all 0.25s ease-in-out;
-    color: #fff;
+    color: rgb(var(--app-white));
     cursor: pointer;
 }
 input[type="button"]:hover {
