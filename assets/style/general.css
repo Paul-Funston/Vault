@@ -276,7 +276,7 @@ input:not([type="button"]) {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
     font-size: 17px;
     font-weight: 400;
-    color: #fff;
+    color: rgb(var(--app-white));
     text-align: left;
     transition: border-color 0.25s ease-in-out;
 }
@@ -296,18 +296,19 @@ input:not([type="button"]):focus {
 input[type="text"].message{
     min-height: 100px;
 }
-input[type="button"] {
+
+input[type="button"] ,input.select-btn{
     width: 100%;
     height: 46px;
     text-align: center;
-    background-color: rgb(var(--app-dark-bg));
+    background-color: rgb(var(--app-color-primary));
     border-radius: 4px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
     font-size: 16px;
     font-weight: 600;
     letter-spacing: 0.2px;
     transition: all 0.25s ease-in-out;
-    color: #fff;
+    color: rgb(var(--app-white));
     cursor: pointer;
 }
 
@@ -322,8 +323,6 @@ input[type="button"]:hover {
     color: rgb(255, 255, 255 / 0.9);
 }
 
-
-  
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  Form Adornments                                                         */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -364,7 +363,6 @@ form .display-valid {
         flex-direction: column;
     }
 
-
     .top-picks div .card {
         width: 100%;
     }
@@ -379,4 +377,46 @@ form .display-valid {
     .subscriptions {
         flex-direction: column;
     }
+}
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/*  Buttons                                                                  */
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+button {
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 1rem;
+    color: rgb(var(--app-color-tertiary));
+    background-color: rgb(var(--app-color-secondary));
+    transition: 0.2s ease-in-out;
+}
+
+button:hover {
+    opacity: 0.8;
+    background-color: rgb(var(--app-color-primary));
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(var(--app-white));
+}
+
+button i {
+    font-size: 1.3rem;
+    color: rgb(var(--app-color-tertiary));
+}
+
+input.select-btn{
+    width: 50px;
+}
+
+input[type="button"]:hover {
+    background-color: rgb(var(--app-color-secondary));
+    color: rgb(var(--app-dark-bg));
+}
+
+input.send:hover {
+    font-size: 25px;
 }
