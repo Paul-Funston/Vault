@@ -345,13 +345,25 @@ form .display-valid {
 }
   
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
 /*  MEDIA QUERIES                                                            */
+
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-/*768px and down*/
+
+/*800px and down*/
+@media (max-width: 800px) {
+    .download * {
+        text-align: center;
+    }
+}
+
+/*670px and down*/
+
 @media (max-width: 670px) {
     .top-picks div {
         flex-direction: column;
     }
+
 
     .top-picks div .card {
         width: 100%;
