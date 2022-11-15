@@ -282,3 +282,27 @@ form .display-valid {
     color: rgb(var(--app-red));
 }
   
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/*  MEDIA QUERIES                                                            */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/*768px and down*/
+@media (max-width: 670px) {
+    .top-picks div {
+        flex-direction: column;
+    }
+
+    .top-picks div .card {
+        width: 100%;
+    }
+
+    .subscriptions div {
+        flex-direction: column;
+    }
+}
+
+/*480px and down*/
+@media (max-width: 480px) {
+    .subscriptions {
+        flex-direction: column;
+    }
+}
