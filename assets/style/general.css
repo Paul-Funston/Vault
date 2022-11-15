@@ -272,7 +272,7 @@ input:not([type="button"]):focus {
     position: relative;
 }
 
-form .formInput + .formInput {
+form > * + * {
     margin-top: 20px;
 }
 
