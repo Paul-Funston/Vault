@@ -46,6 +46,11 @@ button {
     font-size: 1rem;
     color: rgb(var(--app-color-tertiary));
     background-color: rgb(var(--app-color-secondary));
+    transition: 0.2s ease-in-out;
+}
+
+button:hover {
+    opacity: 0.8;
 }
 
 button i {
@@ -60,7 +65,7 @@ header {
     height: var(--header-height);
 }
 
-header h2, footer h2, span {
+header h2, footer h2, span, h1 {
     font-family: "Righteous", "Raleway", Arial, sans-serif;
 }
 
@@ -144,25 +149,62 @@ li {
 /*  Hero banner                                                              */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-.hero-banner{
+.hero-banner {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 50vh;
+    position:relative;
+}
+  
+.hero-banner::before{
+    content: "";
+    background: #f3f3f5 url(../media/hero.jpg) center bottom / cover no-repeat;
+    opacity: 0.4;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    z-index: -3;
+}
+  
+  
+.hero-banner h1{
+    font-size:49px;
+}
+
+/*.hero-banner {
     height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #f3f3f5 url(../media/herobanner.jpg) center center / cover no-repeat;
-}
+    background: #f3f3f5 url(../media/hero.jpg) center bottom / cover no-repeat;
+    opacity: 0.6;
+}*/
 
 .overlay {
-    margin-bottom: 30px;
-    text-align: center;
+    padding-left: 30px;
+    text-align: justify;
 }
-.overlay h1{
+.overlay h1 {
     font-size: 50px;
     font-weight: 500;
 }
-.overlay p{
-    font-size: 30px;
-    font-weight: 500;
+.overlay p {
+    font-size: 24px;
+}
+
+.overlay p+p {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.overlay button {
+    margin-top: 15px;
+    padding: 8px;
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
