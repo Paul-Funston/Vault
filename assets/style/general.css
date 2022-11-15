@@ -286,10 +286,6 @@ input[type="button"] {
     cursor: pointer;
 }
 
-input[type="button"]:hover {
-    background-color: rgb(var(--app-color-primary));
-}
-
 .required {
     margin-top: 24px;
     font-size: 16px;
