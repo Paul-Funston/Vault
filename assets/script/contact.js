@@ -84,7 +84,7 @@ function isFormValid () {
   let userPhone = formPhone.value.trim();
   let valid = true;
 
-  removeValidIndicators(formName, formEmail, formMessage, formPhone)
+  removeValidIndicators(formName, formEmail, formMessage, formPhone);
 
   if (isEmpty(userName)) {
     valid = false
@@ -119,7 +119,11 @@ function isFormValid () {
     formEmail.value = '';
     formPhone.value = '';
     formMessage.value = "Thank you for your message";
+    removeValidIndicators(formName, formEmail, formMessage, formPhone);
     
+    setTimeout(() => {
+      formMessage.value = '';
+    }, 2000)
   }
 
     console.log(valid);
