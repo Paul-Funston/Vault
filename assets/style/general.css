@@ -76,6 +76,10 @@ header a  {
     color: rgb(var(--app-white));
 }
 
+header .login {
+    padding: 0 8px;
+}
+
 a i.fa-twitter{
     color: rgb(var(--app-twitter-icon));
 }
@@ -131,9 +135,6 @@ button.header-open-nav {
 
     li {margin: 1rem auto;}    
 }
-
-
-
 
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -229,7 +230,7 @@ body, a, i {
 
 div.form-container {
     padding: 25px;
-    margin-inline: 25vh;
+    margin-inline: 25vw;
     border: 1px solid rgb(255 255 255 / 0.1);
     height: calc(100vh - var(--header-height) - var(--footer-height));
     border-radius: 8px;
