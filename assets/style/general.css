@@ -29,7 +29,6 @@
     margin-inline: 10vw;
 }
 
-
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  Default                                                                  */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -41,7 +40,6 @@ p, h1, h2, h3, h4, h5, h6 {
 header, footer, body {
     background-color: rgb(var(--app-dark-bg));
 }
-
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  Header                                                                   */
@@ -83,6 +81,7 @@ header .login {
 a i.fa-twitter{
     color: rgb(var(--app-twitter-icon));
 }
+
  a i.fa-facebook-f{
     color: rgb(var(--app-facebook-icon));
 }
@@ -136,7 +135,6 @@ button.header-open-nav {
     li {margin: 1rem auto;}    
 }
 
-
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  Hero banner                                                              */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -146,7 +144,7 @@ button.header-open-nav {
     justify-content: flex-start;
     align-items: center;
     height: 50vh;
-    position:relative;
+    position: relative;
 }
   
 .hero-banner::before{
@@ -171,10 +169,12 @@ button.header-open-nav {
     padding-left: 30px;
     text-align: justify;
 }
+
 .overlay h1 {
     font-size: 50px;
     font-weight: 500;
 }
+
 .overlay p {
     font-size: 24px;
 }
@@ -195,7 +195,6 @@ button.header-open-nav {
 
 footer {
     height: var(--footer-height);
-    /* background-color: rgb(var(--app-light-bg)); */
 }
 
 .footer-container {
@@ -220,8 +219,6 @@ footer a {
 
 body, a, i {
     color: rgb(var(--app-white));
-    /* background-color: rgb(var(--app-dark-bg)); */
-    
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -296,7 +293,7 @@ input[type="button"] {
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-/*  Form Adornments                                                         */
+/*  Form Valid Indicators                                                    */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 form .display-valid {
@@ -343,7 +340,6 @@ form .display-valid {
         flex-direction: column;
     }
 }
-
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
