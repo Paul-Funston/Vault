@@ -15,10 +15,6 @@
     gap: 15px;
 }
 
-.top-picks div {
-    flex-wrap: wrap;
-}
-
 .top-picks ul li, .subscriptions ul li {
     margin: 10px 0;
 }
@@ -43,7 +39,7 @@
 }
 
 .top-picks .card {
-    width: calc(50% - 15px);
+    width: 300px;
     height: 250px;
     cursor: pointer;
     transition: 0.3s ease-in-out;
@@ -67,13 +63,13 @@
     background-color: rgb(var(--app-color-tertiary));
 }
 
-.middle-card {
-    box-shadow: 0px 0px 20px #F2F4F9;
-}
-
 .select-btn {
     width: 65%;
     padding: 15px;
+}
+
+.lower-cards {
+    transform: translateY(30px);
 }
 
 .download {
