@@ -111,7 +111,7 @@ header .hidden {
     display: none;
 }
 
-button.button-nav {
+div.header-container button.button-nav {
     background-color: rgb(var(--app-dark-bg));
 }
 
@@ -261,7 +261,7 @@ div.form-container {
 }
 
 form {
-    max-width: (100% - 100px, 1080px);
+    /* max-width: (100% - 100px, 1080px); */
     text-align: center;
     font-size: 0;
 }
@@ -354,6 +354,10 @@ form .display-valid {
     .download * {
         text-align: center;
     }
+
+    div.form-container {
+        margin-inline: 5vh;
+    }
 }
 
 /*670px and down*/
@@ -370,6 +374,8 @@ form .display-valid {
     .subscriptions div {
         flex-direction: column;
     }
+
+ 
 }
 
 /*480px and down*/
