@@ -15,9 +15,6 @@
     --app-blue:         112 147 219;
     --app-blue-second:   96 135 215;
     --app-yellow:       219 201 112;
-    --app-twitter-icon: 29, 161, 242;
-    --app-facebook-icon: 24, 119, 242;
-    --app-instagram-icon: 193 53 132;
 
     --header-height: 56px;
     --footer-height: 130px;
@@ -89,16 +86,6 @@ li {
 header a  {
     text-decoration: none;
     color: #FFF;
-}
- a i.fa-twitter{
-    color: rgb(var(--app-twitter-icon));
-}
- a i.fa-facebook-f{
-    color: rgb(var(--app-facebook-icon));
-}
-
- a i.fa-instagram {
-    color: rgb(var(--app-instagram-icon));
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -188,8 +175,6 @@ footer a {
     font-size: 12px;
 }
 
-
-
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  Main                                                                     */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -209,10 +194,6 @@ form {
     border-radius: 8px;
     text-align: center;
 
-}
-
-form p{
-    text-align: center;
 }
 
 form {
@@ -257,7 +238,7 @@ input[type="button"] {
     width: 100%;
     height: 46px;
     text-align: center;
-    background-color: rgb(var(--app-color-primary));
+    background-color: rgb(var(--app-dark-bg));
     border-radius: 4px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
     font-size: 16px;
@@ -269,10 +250,7 @@ input[type="button"] {
 }
 
 input[type="button"]:hover {
-    background-color: rgb(var(--app-color-secondary));
-    font-size: 25px;
-    font-weight: 600;
-    color: rgb(var(--app-dark-bg));
+    background-color: rgb(var(--app-color-primary));
 }
 
 .required {
