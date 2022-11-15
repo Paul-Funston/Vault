@@ -335,6 +335,10 @@ form .display-valid {
 
 /*670px and down*/
 @media (max-width: 670px) {
+    .top-picks div .card {
+        width: 100%;
+    }
+    
     .top-picks div {
         flex-direction: column;
     }
