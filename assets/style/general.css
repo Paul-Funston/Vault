@@ -151,15 +151,6 @@ button.header-open-nav {
     font-size:49px;
 }
 
-/*.hero-banner {
-    height: 50vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #f3f3f5 url(../media/hero.jpg) center bottom / cover no-repeat;
-    opacity: 0.6;
-}*/
-
 .overlay {
     padding-left: 30px;
     text-align: justify;
