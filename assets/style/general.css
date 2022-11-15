@@ -23,9 +23,10 @@
    }
 
 .container {
-    width: min(100% - 30px, 1080px);
-    margin-inline: auto;
+    margin-inline: 10vw;
 }
+
+
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  Default                                                                  */
@@ -40,13 +41,16 @@ header, footer, body {
 }
 
 button {
-    width: 65%;
-    padding: 15px;
     border-radius: 5px;
     font-weight: 700;
     font-size: 1rem;
     color: rgb(var(--app-color-tertiary));
     background-color: rgb(var(--app-color-secondary));
+}
+
+button i {
+    font-size: 1.3rem;
+    color: rgb(var(--app-color-tertiary));
 }
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  Header                                                                   */
@@ -56,7 +60,7 @@ header {
     height: var(--header-height);
 }
 
-header h2, footer h2 {
+header h2, footer h2, span {
     font-family: "Righteous", "Raleway", Arial, sans-serif;
 }
 
@@ -158,11 +162,13 @@ body, a, i {
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  Form                                                                     */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-.form {
-    padding: 0 25px 25px 25px;
+form {
+    padding: 25px;
+    margin: 10px 0;
     border: 1px solid rgb(255 255 255 / 0.1);
     border-radius: 8px;
     text-align: center;
+
 }
 
 form p{
@@ -171,7 +177,7 @@ form p{
 
 form {
     max-width: (100% - 100px, 1080px);
-    height: calc(100vh - var(--header-height) - var(--footer-height));
+    height: calc(100vh - var(--header-height) - var(--footer-height) - 50px);
     margin-inline: auto;
     text-align: right;
     font-size: 0;
@@ -192,8 +198,12 @@ input:not([type="button"]) {
     transition: border-color 0.25s ease-in-out;
 }
 
-form input + input {
+form .formInput + .formInput {
     margin-top: 20px;
+}
+
+.formInput {
+    position: relative;
 }
 
 input:not([type="button"]):focus {
@@ -232,8 +242,25 @@ input[type="button"]:hover {
     color: rgb(255, 255, 255 / 0.9);
 }
 
+
   
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-/*  Button                                                                     */
+/*  Form Adornments                                                         */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+form .display-valid {
+    z-index: 2222;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    font-size: 22px;
+}
+
+.fa-check {
+    color: rgb(var(--app-green));
+}
+
+.fa-xmark {
+    color: rgb(var(--app-red));
+}
   

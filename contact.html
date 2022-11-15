@@ -18,11 +18,11 @@
     <body>
         <header>
             <div class="container header-container">
-                    <h2><a href="#">VAULT</a></h2>
+                    <h2><a href="./index.html">VAULT</a></h2>
                     <div class="space"></div>
                     <nav>
                         <ul>
-                            <li><a href="#" title="contact us">Contact</a></li>
+                            <li><a href="./contact.html" title="contact us">Contact</a></li>
                             <li><a href="#" title="twitter"><i class="fa-brands fa-twitter"></i></a></li>
                             <li><a href="#" title="facebook"><i class="fa-brands fa-facebook"></i></a></li>
                             <li><a href="#" title="instagram"><i class="fa-brands fa-instagram"></i></a></li>
@@ -34,16 +34,43 @@
         </header>
         <main>
             <div class="container">
-                <form novalidate>
-                    <input type="text" class="user-name" placeholder="User name *" required>
+                <!-- <form novalidate>
+                    <input type="text" class="user-name" placeholder="User name *" required>                    
                     <input type="email" class="email" placeholder="Email (john@email.com) *" required>
-                    <input type="tel" class="phone" placeholder="Phone Number *">
-                    <input type="text" class="message" placeholder="Message" required> 
-                    <!-- <input type="checkbox" class="newsletter">
-    <label for="newsletter"> Do you want to subscribe to our newsletter</label> -->
+                    <input type="tel" class="phone" placeholder="Phone Number">
+                    <input type="text" class="message" placeholder="Message" required>  -->
+
+
+
+
+                    <label for="newsletter"> Do you want to subscribe to our newsletter</label> -->
+                    <!-- <p class="required">Fields with * are required</p>
+                    <input type="button" class="send" value="Submit">
+                </form> -->
+
+                <div class="otherform">
+                  <form novalidate>
+                    <div class="formInput">
+                      <input type="text" class="user-name" placeholder="User name *" name="username" required>                    
+                      <i class="display-valid"></i>
+                    </div>
+                    <div class="formInput">
+                      <input type="email" class="email" placeholder="Email (john@email.com) *" name="email" required>
+                      <i class="display-valid"></i>
+                    </div>
+                    <div class="formInput">
+                      <input type="tel" class="phone" placeholder="Phone Number" name="phone">
+                      <i class="display-valid"></i>
+                    </div>
+                    <div class="formInput">
+                      <input type="text" class="message" placeholder="Message" name="message" required> 
+                      <i class="display-valid"></i>
+                    </div>
+
                     <p class="required">Fields with * are required</p>
-                     <input type="button" class="send" value="Submit">
+                    <input type="button" class="send" value="Submit">
                 </form>
+                </div>
             </div>
         </main>
         <footer>
