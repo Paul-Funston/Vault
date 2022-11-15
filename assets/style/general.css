@@ -91,6 +91,17 @@ header a  {
     color: #FFF;
 }
 
+a i.fa-twitter{
+    color: rgb(var(--app-twitter-icon));
+}
+ a i.fa-facebook-f{
+    color: rgb(var(--app-facebook-icon));
+}
+
+ a i.fa-instagram {
+    color: rgb(var(--app-instagram-icon));
+}
+
 /* nav menu */
 
 .button-nav {
