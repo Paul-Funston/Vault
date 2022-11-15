@@ -73,6 +73,10 @@ function isNaPhone(input) {
   return false
 }
 
+onEvent('click', formButton, () => {
+  isFormValid();
+});
+
 function isFormValid () {
   let userName = formName.value.trim();
   let userEmail = formEmail.value.trim();
@@ -80,9 +84,7 @@ function isFormValid () {
   let userPhone = formPhone.value.trim();
   let valid = true;
 
-
   removeValidIndicators(formName, formEmail, formMessage, formPhone)
-
 
   if (isEmpty(userName)) {
     valid = false
@@ -112,12 +114,18 @@ function isFormValid () {
     addValidIndicator(formPhone);
   }
 
+  if (valid) {
+    formName.value = '';
+    formEmail.value = '';
+    formPhone.value = '';
+    formMessage.value = "Thank you for your message";
+    
+  }
+
     console.log(valid);
 }
 
-onEvent('click', formButton, () => {
-  isFormValid();
-});
+
 
 
 // Valid Signs
