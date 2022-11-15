@@ -73,47 +73,63 @@ function isNaPhone(input) {
   return false
 }
 
+onEvent('click', formButton, () => {
+  isFormValid();
+});
+
 function isFormValid () {
   let userName = formName.value.trim();
   let userEmail = formEmail.value.trim();
   let userMessage = formMessage.value.trim();
   let userPhone = formPhone.value.trim();
   let valid = true;
-  removeValidSigns(formName, formEmail, formMessage, formPhone)
 
-  if (anyEmpty(userName, userEmail, userMessage)) {
-    valid = false;
-    if (isEmpty(userName)) {
-      addInvalidSign(formName)
-    } else if (isEmpty(userMessage)) {
-      addInvalidSign(formMessage)
-    }
+  removeValidIndicators(formName, formEmail, formMessage, formPhone);
+
+  if (isEmpty(userName)) {
+    valid = false
+    addValidIndicator(formName, valid)
   } else {
-    addValidSigns(formName, formMessage);
+    addValidIndicator(formName)
   }
    
-   
+  if (isEmpty(userMessage)) {
+    valid = false
+    addValidIndicator(formMessage, valid)
+  } else {
+    addValidIndicator(formMessage)
+  }
 
   if (!isEmail(userEmail)) {
-    addInvalidSign(formEmail);
     valid = false;
+    addValidIndicator(formEmail, valid);
   } else {
-    addValidSigns(formEmail);
+    addValidIndicator(formEmail);
   }
 
   if (!isEmpty(userPhone) && !isNaPhone(userPhone)) {
-    addInvalidSign(formPhone);
     valid = false;
+    addValidIndicator(formPhone, valid)
   } else {
-    addValidSigns(formPhone);
+    addValidIndicator(formPhone);
+  }
+
+  if (valid) {
+    formName.value = '';
+    formEmail.value = '';
+    formPhone.value = '';
+    formMessage.value = "Thank you for your message";
+    removeValidIndicators(formName, formEmail, formMessage, formPhone);
+    
+    setTimeout(() => {
+      formMessage.value = '';
+    }, 2000)
   }
 
     console.log(valid);
 }
 
-onEvent('click', formButton, () => {
-  isFormValid();
-});
+
 
 
 // Valid Signs
@@ -129,41 +145,32 @@ onEvent('click', formButton, () => {
 
 function addValidSigns(...items) {
   items.forEach(item => {
-    let target = item.parentNode;
-    let targetSign = target.children[1];
-    targetSign.classList.add('fa-solid');
-    targetSign.classList.add('fa-check');
+    let indicator = findMatchingIndicator(item)
+    indicator.classList.add('fa-solid');
+    indicator.classList.add('fa-check');
   });
 }
 
-function addInvalidSign(item) {
-    let target = item.parentNode;
-    let targetSign = target.children[1];
-    targetSign.classList.add('fa-solid');
-    targetSign.classList.add('fa-xmark');
-  }
-
-
-
-function swapValidSign(element) {
-  let target = element.parentNode;
-  let targetSign = target.children[1];
-
-  // targetSign.classList.add('fa-solid')
-  targetSign.classList.remove('fa-check')
-  targetSign.classList.add('fa-xmark')
+function addValidIndicator(node, valid = true) {
+  let indicator = findMatchingIndicator(node)
+  indicator.classList.add('fa-solid');
+  if (valid)
+    indicator.classList.add('fa-check');
+  else 
+    indicator.classList.add('fa-xmark');
 }
 
-function removeValidSigns(...elements) {
-  elements.forEach(element => {
-    let target = element.parentNode;
-    let targetSign = target.children[1];
-    targetSign.classList.remove('fa-solid');
-    targetSign.classList.remove('fa-check');
-    targetSign.classList.remove('fa-xmark');
-  })
+function removeValidIndicators(...nodes) {
+  nodes.forEach(node => {
+    let indicator = findMatchingIndicator(node);
+    indicator.classList.remove('fa-solid');
+    indicator.classList.remove('fa-check');
+    indicator.classList.remove('fa-xmark');
+  });
+}
 
-  }
-
-
+function findMatchingIndicator(node) {
+  let matchedIndicator = node.parentNode.children[1]
+  return matchedIndicator
+}
 
