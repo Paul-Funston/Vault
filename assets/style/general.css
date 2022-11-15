@@ -161,7 +161,6 @@ button.header-open-nav {
     z-index: -3;
 }
   
-  
 .hero-banner h1{
     font-size:49px;
 }
@@ -207,7 +206,6 @@ footer {
 
 footer a {
     text-decoration: none;
-
 }
 
 .copy {
@@ -231,7 +229,6 @@ body, a, i {
 div.form-container {
     padding: 25px;
     margin-inline: 25vh;
-
     border: 1px solid rgb(255 255 255 / 0.1);
     height: calc(100vh - var(--header-height) - var(--footer-height));
     border-radius: 8px;
@@ -239,7 +236,6 @@ div.form-container {
 }
 
 form {
-    /* max-width: (100% - 100px, 1080px); */
     text-align: center;
     font-size: 0;
 }
@@ -259,24 +255,23 @@ input:not([type="button"]) {
     transition: border-color 0.25s ease-in-out;
 }
 
-form .formInput + .formInput {
-    margin-top: 20px;
+input:not([type="button"]):focus {
+    border: 1px solid rgb(255 255 255 / 0.2);
 }
 
 .formInput {
     position: relative;
 }
 
-
-input:not([type="button"]):focus {
-    border: 1px solid rgb(255 255 255 / 0.2);
+form .formInput + .formInput {
+    margin-top: 20px;
 }
 
 input[type="text"].message{
     min-height: 100px;
 }
 
-input[type="button"] ,input.select-btn{
+input[type="button"] {
     width: 100%;
     height: 46px;
     text-align: center;
@@ -321,11 +316,7 @@ form .display-valid {
 .fa-xmark {
     color: rgb(var(--app-red));
 }
-@media screen and (max-width: 770px){
-    .form-container {
-        margin-inline: 5;
-    }
-}
+
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 
@@ -345,44 +336,16 @@ form .display-valid {
 }
 
 /*670px and down*/
-
 @media (max-width: 670px) {
     .top-picks div {
         flex-direction: column;
     }
 
-
-button:hover {
-    opacity: 0.8;
-    background-color: rgb(var(--app-color-primary));
-    font-size: 16px;
-    font-weight: 600;
-    color: rgb(var(--app-white));
-}
-
     .subscriptions div {
         flex-direction: column;
     }
-
 }
 
-input[type="text"].message{
-    min-height: 100px;
-}
-input:not([type="button"]) {
-    width: 100%;
-    height: 48px;
-    padding: 0 15px;
-    border: 1px solid rgb(255 255 255 / 0.08);
-    background-color: rgb(255 255 255 / 0.08);
-    border-radius: 4px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
-    font-size: 17px;
-    font-weight: 400;
-    color: rgb(var(--app-white));
-    text-align: left;
-    transition: border-color 0.25s ease-in-out;
-}
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
@@ -412,10 +375,6 @@ button i {
     color: rgb(var(--app-color-tertiary));
 }
 
-input.select-btn{
-    width: 50px;
-}
-
 input[type="button"]:hover {
     background-color: rgb(var(--app-color-secondary));
     color: rgb(var(--app-dark-bg));
@@ -425,3 +384,10 @@ input.send:hover {
     font-size: 25px;
 }
 
+button:hover {
+    opacity: 0.8;
+    background-color: rgb(var(--app-color-primary));
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(var(--app-white));
+}
