@@ -16,6 +16,10 @@
     --app-blue-second:   96 135 215;
     --app-yellow:       219 201 112;
 
+    --app-twitter-icon: 29, 161, 242;
+    --app-facebook-icon: 24, 119, 242;
+    --app-instagram-icon: 193 53 132;
+
     --header-height: 56px;
     --footer-height: 130px;
    }
