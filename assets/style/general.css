@@ -346,6 +346,15 @@ form .display-valid {
     .subscriptions div {
         flex-direction: column;
     }
+
+    .overlay {
+        text-align: center;
+    }
+
+    .overlay p {
+        font-size: 16px;
+    }
+
 }
 
 
