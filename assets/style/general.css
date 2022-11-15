@@ -80,6 +80,12 @@ header a  {
     text-decoration: none;
     color: #FFF;
 }
+header a i.fa-twitter{
+    color: rgb(var(--app-twitter-icon));
+}
+header a i.fa-facebook{
+    color: rgb(var(--app-facebook-icon));
+}
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  Hero banner                                                              */
