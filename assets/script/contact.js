@@ -30,7 +30,9 @@ const formMessage = select('.message');
 const formSubscribe = '';
 const formButton = select('.send');
 const formPhone = select('.phone');
-const formInputs = selectAll('form input');
+const formInputs = selectAll('form div input');
+
+console.log(formInputs);
 
 
 // function displayValid (element, boolean = false) { 
@@ -76,28 +78,92 @@ function isFormValid () {
   let userEmail = formEmail.value.trim();
   let userMessage = formMessage.value.trim();
   let userPhone = formPhone.value.trim();
+  let valid = true;
+  removeValidSigns(formName, formEmail, formMessage, formPhone)
 
   if (anyEmpty(userName, userEmail, userMessage)) {
-    console.log('false is empty');
-    return false
+    valid = false;
+    if (isEmpty(userName)) {
+      addInvalidSign(formName)
+    } else if (isEmpty(userMessage)) {
+      addInvalidSign(formMessage)
+    }
+  } else {
+    addValidSigns(formName, formMessage);
   }
-    
+   
    
 
   if (!isEmail(userEmail)) {
-    console.log(`false email not valid`);
-    return false
+    addInvalidSign(formEmail);
+    valid = false;
+  } else {
+    addValidSigns(formEmail);
   }
 
   if (!isEmpty(userPhone) && !isNaPhone(userPhone)) {
-    console.log('false phone not valid');
-    return false
-
+    addInvalidSign(formPhone);
+    valid = false;
+  } else {
+    addValidSigns(formPhone);
   }
 
-    console.log('true');
+    console.log(valid);
 }
 
 onEvent('click', formButton, () => {
   isFormValid();
 });
+
+
+// Valid Signs
+
+// formInputs.forEach(input => {
+//   onEvent(focus, input, removeValidSign(input))
+// })
+
+// formInputs.forEach(input => {
+//   onEvent(blur, input, addValidSign(input))
+// })
+
+
+function addValidSigns(...items) {
+  items.forEach(item => {
+    let target = item.parentNode;
+    let targetSign = target.children[1];
+    targetSign.classList.add('fa-solid');
+    targetSign.classList.add('fa-check');
+  });
+}
+
+function addInvalidSign(item) {
+    let target = item.parentNode;
+    let targetSign = target.children[1];
+    targetSign.classList.add('fa-solid');
+    targetSign.classList.add('fa-xmark');
+  }
+
+
+
+function swapValidSign(element) {
+  let target = element.parentNode;
+  let targetSign = target.children[1];
+
+  // targetSign.classList.add('fa-solid')
+  targetSign.classList.remove('fa-check')
+  targetSign.classList.add('fa-xmark')
+}
+
+function removeValidSigns(...elements) {
+  elements.forEach(element => {
+    let target = element.parentNode;
+    let targetSign = target.children[1];
+    targetSign.classList.remove('fa-solid');
+    targetSign.classList.remove('fa-check');
+    targetSign.classList.remove('fa-xmark');
+  })
+
+  }
+
+
+
