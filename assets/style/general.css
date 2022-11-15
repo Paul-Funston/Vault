@@ -8,7 +8,6 @@
     --app-dark-bg:        12 22 28;
     --app-light-bg:     10 40 10;
 
-    --app-white:        255 255 255;
     --app-red:          219 112 147;
     --app-green:        112 219 147;
     --app-purple:       147 112 219;
@@ -38,7 +37,23 @@ header, footer, body {
     background-color: rgb(var(--app-dark-bg));
 }
 
+button {
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1rem;
+    color: rgb(var(--app-color-tertiary));
+    background-color: rgb(var(--app-color-secondary));
+    transition: 0.2s ease-in-out;
+}
 
+button:hover {
+    opacity: 0.8;
+}
+
+button i {
+    font-size: 1.3rem;
+    color: rgb(var(--app-color-tertiary));
+}
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  Header                                                                   */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -64,12 +79,12 @@ nav ul {
 }
 
 li {
-    margin-left: 15px;
+    margin-left: 8px;
 }
 
 header a  {
     text-decoration: none;
-    color: rgb(var(--app-white));
+    color: #FFF;
 }
 
 /* nav menu */
@@ -201,7 +216,6 @@ footer {
 
 footer a {
     text-decoration: none;
-
 }
 
 .copy {
@@ -213,7 +227,7 @@ footer a {
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 body, a, i {
-    color: rgb(var(--app-white));
+    color: #fff;
     /* background-color: rgb(var(--app-dark-bg)); */
     
 }
@@ -221,22 +235,36 @@ body, a, i {
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  Form                                                                     */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-.form-container {
+form {
     padding: 25px;
-    margin-inline: 15vw;
+    margin: 10px 0;
     border: 1px solid rgb(255 255 255 / 0.1);
     border-radius: 8px;
     text-align: center;
-    height: calc(100vh - var(--header-height) - var(--footer-height));
-
 
 }
 
 form {
     max-width: (100% - 100px, 1080px);
+    height: calc(100vh - var(--header-height) - var(--footer-height) - 50px);
     margin-inline: auto;
     text-align: right;
     font-size: 0;
+}
+
+input:not([type="button"]) {
+    width: 100%;
+    height: 48px;
+    padding: 0 15px;
+    border: 1px solid rgb(255 255 255 / 0.08);
+    background-color: rgb(255 255 255 / 0.08);
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
+    font-size: 17px;
+    font-weight: 400;
+    color: #fff;
+    text-align: left;
+    transition: border-color 0.25s ease-in-out;
 }
 
 form .formInput + .formInput {
@@ -245,6 +273,32 @@ form .formInput + .formInput {
 
 .formInput {
     position: relative;
+}
+
+input:not([type="button"]):focus {
+    border: 1px solid rgb(255 255 255 / 0.2);
+}
+
+input[type="text"].message{
+    min-height: 100px;
+}
+input[type="button"] {
+    width: 100%;
+    height: 46px;
+    text-align: center;
+    background-color: rgb(var(--app-dark-bg));
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    transition: all 0.25s ease-in-out;
+    color: #fff;
+    cursor: pointer;
+}
+
+input[type="button"]:hover {
+    background-color: rgb(var(--app-color-primary));
 }
 
 .required {
@@ -275,80 +329,35 @@ form .display-valid {
 .fa-xmark {
     color: rgb(var(--app-red));
 }
-@media screen and (max-width: 770px){
-    .form-container {
-        margin-inline: 5;
+  
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/*  MEDIA QUERIES                                                            */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/*800px and down*/
+@media (max-width: 800px) {
+    .download * {
+        text-align: center;
     }
 }
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-/*  Buttons                                                        */
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-button {
-    border-radius: 4px;
-    font-weight: 700;
-    font-size: 1rem;
-    color: rgb(var(--app-color-tertiary));
-    background-color: rgb(var(--app-color-secondary));
-    transition: 0.2s ease-in-out;
+
+/*670px and down*/
+@media (max-width: 670px) {
+    .top-picks div {
+        flex-direction: column;
+    }
+
+    .top-picks div .card {
+        width: 100%;
+    }
+
+    .subscriptions div {
+        flex-direction: column;
+    }
 }
 
-button:hover {
-    opacity: 0.8;
-    background-color: rgb(var(--app-color-primary));
-    font-size: 16px;
-    font-weight: 600;
-    color: rgb(var(--app-white));
+/*480px and down*/
+@media (max-width: 480px) {
+    .subscriptions {
+        flex-direction: column;
+    }
 }
-
-button i {
-    font-size: 1.3rem;
-    color: rgb(var(--app-color-tertiary));
-}
-input:not([type="button"]):focus {
-    border: 1px solid rgb(255 255 255 / 0.2);
-}
-
-input[type="text"].message{
-    min-height: 100px;
-}
-input:not([type="button"]) {
-    width: 100%;
-    height: 48px;
-    padding: 0 15px;
-    border: 1px solid rgb(255 255 255 / 0.08);
-    background-color: rgb(255 255 255 / 0.08);
-    border-radius: 4px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
-    font-size: 17px;
-    font-weight: 400;
-    color: rgb(var(--app-white));
-    text-align: left;
-    transition: border-color 0.25s ease-in-out;
-}
-input.select-btn{
-    width: 50px;
-}
-input[type="button"] ,input[class="select-btn"]{
-    width: 100%;
-    height: 46px;
-    text-align: center;
-    background-color: rgb(var(--app-dark-bg));
-    border-radius: 4px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
-    font-size: 16px;
-    font-weight: 600;
-    letter-spacing: 0.2px;
-    transition: all 0.25s ease-in-out;
-    color: rgb(var(--app-white));
-    cursor: pointer;
-}
-input[type="button"]:hover {
-    background-color: rgb(var(--app-color-secondary));
-    font-size: 25px;
-    font-weight: 600;
-    color: rgb(var(--app-dark-bg));
-}
-input[class="send"]:hover {
-    font-size: 25px;
-}
-  
