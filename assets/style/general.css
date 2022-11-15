@@ -17,6 +17,7 @@
     --app-yellow:       219 201 112;
     --app-twitter-icon: 29, 161, 242;
     --app-facebook-icon: 24, 119, 242;
+    --app-instagram-icon: 193 53 132;
 
     --header-height: 56px;
     --footer-height: 130px;
@@ -84,12 +85,15 @@ header a  {
     text-decoration: none;
     color: #FFF;
 }
-header a i.fa-twitter{
+ a i.fa-twitter{
     color: rgb(var(--app-twitter-icon));
 }
-header a i.fa-facebook{
+ a i.fa-facebook-f{
     color: rgb(var(--app-facebook-icon));
-    background-color: rgb(255, 255, 255);
+}
+
+ a i.fa-instagram {
+    color: rgb(var(--app-instagram-icon));
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -142,13 +146,7 @@ footer a {
     font-size: 12px;
 }
 
-footer a i.fa-twitter{
-    color: rgb(var(--app-twitter-icon));
-}
-footer a i.fa-facebook{
-    color: rgb(var(--app-facebook-icon));
-    background-color: rgb(255, 255, 255);
-}
+
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  Main                                                                     */
